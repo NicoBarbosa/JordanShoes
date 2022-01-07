@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JordanShoes</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <header class="header">
+    <section class="propaganda">
+      <p>Ganhe R$10,00 de desconto no frete</p>
+    </section>
+    <section class="logo">
+      <h2>JordanShoes</h2>
+    </section>
+    <section class="wallpaper">
+    <div class="background"></div>
+        <h2 class="titulo-background">A melhor loja de Jordan</h2>
+        <p class="descricao-background">O tênis Jordan é fruto de uma velha e forte parceria entre a Nike e o jogador Michael Jordan.</p>
+    </section>
+  </header>
+
+  <main class="conteudo-principal">
+    <h2 class="titulo-principal">Destaques</h2>
+    <p class="descricao-principal">Frete grátis e chinelo de brinde é aqui, aproveite por tempo limitado. </p>
+    <section class="grade-produtos">
+      <div class="container-produto">
+        <img class="produto" src="img/1.png" alt="Tênis Jordan">
+      </div>
+      <div class="container-produto">
+        <img class="produto" src="img/2.png" alt="Tênis Jordan">
+      </div>
+      <div class="container-produto">
+        <img class="produto" src="img/3.png" alt="Tênis Jordan">
+      </div>
+      <div class="container-produto">
+        <img class="produto" src="img/4.png" alt="Tênis Jordan">
+      </div>
+      <div class="container-produto">
+        <img class="produto" src="img/5.png" alt="Tênis Jordan">
+      </div>
+      <div class="container-produto">
+        <img class="produto" src="img/6.png" alt="Tênis Jordan">
+      </div>
+      <div class="container-produto">
+        <img class="produto" src="img/7.png" alt="Tênis Jordan">
+      </div>
+      <div class="container-produto">
+        <img class="produto" src="img/8.png" alt="Tênis Jordan">
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <p class="direitos">©Todos os direitos reservados</p>
+  </footer>
+  
+  <script>
+    function typeWriter(elemento) {
+      const textoArray = elemento.innerHTML.split('');
+      elemento.innerHTML = ''
+      textoArray.forEach((letra, index) => {
+        setTimeout(() => 
+          elemento.innerHTML += letra, 30 * index)
+      })
+    }
+
+    const titulo = document.querySelector('.descricao-background')
+    typeWriter(titulo)
+  </script>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    const sr = ScrollReveal({
+      origin: 'top',
+      distance: '50px',
+      duration: 2000,
+      reset: true
+    });
+    
+    ScrollReveal().reveal('.titulo-principal', { delay: 200 });
+    ScrollReveal().reveal('.descricao-principal', { delay: 400 });
+    ScrollReveal().reveal('.container-produto', { delay: 500 });
+    ScrollReveal().reveal('.produto', { delay: 600 });
+    </script>
+
+</body>
+</html>
